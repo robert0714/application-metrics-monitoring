@@ -6,7 +6,7 @@ services:
     image: influxdb:latest
     ports:
       - "8086:8086"
-      - "8083:8086"
+      - "8083:8083"
       - "8090:8090"
       - "8099:8099"
     environment:
@@ -16,7 +16,7 @@ services:
     container_name: telegraf
     image: telegraf:latest
     volumes:
-      - ./orderfy-config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - .$PWD/orderfy-config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     ports:
       - "8125:8125"
     depends_on:
@@ -29,7 +29,7 @@ services:
     container_name: grafana
     image: grafana/grafana
     volumes:
-      - ./orderfy-config/:/etc/grafana/scripts
+      - $PWD/orderfy-config/:/etc/grafana/scripts
     ports:
       - "3000:3000"
     depends_on:
