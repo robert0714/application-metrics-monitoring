@@ -1,14 +1,14 @@
 package glue.entities;
 
-
-import java.util.ArrayList;
+ 
+import java.util.List;
 
 public class DockerConfiguration {
     private String dockerHost;
     private String dockerTlsVerify;
     private String dockerCertPath;
     private String dockerConfigPath;
-    private ArrayList<String> dockerContainersNameFilter;
+    private List<String> dockerContainersNameFilter;
     private String applicationDefaultNetworkName;
 	public String getDockerHost() {
 		return dockerHost;
@@ -34,10 +34,10 @@ public class DockerConfiguration {
 	public void setDockerConfigPath(String dockerConfigPath) {
 		this.dockerConfigPath = dockerConfigPath;
 	}
-	public ArrayList<String> getDockerContainersNameFilter() {
+	public List<String> getDockerContainersNameFilter() {
 		return dockerContainersNameFilter;
 	}
-	public void setDockerContainersNameFilter(ArrayList<String> dockerContainersNameFilter) {
+	public void setDockerContainersNameFilter(List<String> dockerContainersNameFilter) {
 		this.dockerContainersNameFilter = dockerContainersNameFilter;
 	}
 	public String getApplicationDefaultNetworkName() {

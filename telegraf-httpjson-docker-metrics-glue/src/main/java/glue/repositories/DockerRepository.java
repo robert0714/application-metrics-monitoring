@@ -18,6 +18,7 @@ public class DockerRepository  {
                 .withDockerConfig(targetConfig.getDockerConfigPath())
                 .build();
 
+
         return DockerClientBuilder.getInstance(config).build();
     }
 }
